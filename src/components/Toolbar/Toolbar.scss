@@ -1,0 +1,52 @@
+@import '../../styles/colors';
+
+.Toolbar {
+	user-select: none;
+	border-radius: 0.25em;
+	box-shadow: 0 0 1em 0px rgba(0,0,0,0.25);
+	border: 1px solid rgba(255,255,255,0.25);
+}
+
+.Toolbar .toolbar-header {
+	background-color: #424242;
+	padding: 0.5em 1em; 
+	border-bottom: 1px solid $deepGray;	
+	border-top-right-radius: 0.15em;
+	border-top-left-radius: 0.15em;
+}
+
+.Toolbar .toolbar-header h4 {
+	line-height: 1.0;
+	margin: 0;
+}
+
+.Toolbar .toolbar-content {
+	background-color: #535353;
+	padding: 1em;
+	border-bottom-right-radius: 0.15em;
+	border-bottom-left-radius: 0.15em;
+}
+
+.Toolbar .toolbar-content > ul {
+	margin: 0;
+	padding: 0;
+	display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  list-style-type: none;
+  justify-items: center;
+}
+
+.Toolbar .toolbar-content > ul > li {
+}
+
+@media only screen and (max-width: 1200px) {
+	.Toolbar .toolbar-content > ul {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.Toolbar .toolbar-content > ul {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

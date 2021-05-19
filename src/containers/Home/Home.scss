@@ -1,0 +1,76 @@
+@import '../../styles/colors';
+@import '../../styles/animations';
+
+.Home {
+
+}
+
+.Home .home-header {
+	display: grid;
+  margin-top: 2em;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1em;
+  justify-content: start;
+  align-items: center;
+}
+
+.Home .home-header .title {
+}
+
+.Home .home-header .icon {
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	width: 72px;
+	height: 72px;
+}
+
+@media only screen and (max-width: 720px) {
+	.Home .home-header {
+		display: block;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.Home .home-header .icon {
+		margin: 0 auto;
+		margin-bottom: 1em;
+	}
+}
+
+.Home h1, h2 {
+	margin: 0;
+}
+
+.Home h2 {
+	margin-top: 0.2em;
+	font-weight: 300;
+	animation: sunrise;
+	animation-duration: 2s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+.Home .hero p {
+	font-size: 1.1em;
+	font-weight: 300;
+	line-height: 1.8;
+	margin-top: 1em;
+}
+
+.Home .hero p::selection,
+.Home .hero strong::selection {
+	background: $lightOrange;
+	color: $blackInk;
+}
+
+.Home .toolbar-container {
+	margin: 2em 0;
+	
+}
+
+@media only screen and (max-width: 540px) {
+	.Home h2 {
+		font-size: 1.3em;
+	}
+}

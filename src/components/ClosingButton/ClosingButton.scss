@@ -1,0 +1,37 @@
+@import '../../styles/colors';
+
+$size: 20px;
+
+.ClosingButton {
+  width: $size;
+  cursor: pointer;
+}
+
+.cross-1 {
+  margin-right: 1em;
+  transform: rotate(45deg);
+  Z-index: 1;
+}
+
+.cross-2 {
+  transform: rotate(90deg);
+  Z-index: 2;
+}
+
+.ClosingButton .cross-1,
+.ClosingButton .cross-2 {
+  width: 2px;
+  height: $size;
+  background-color: darken($dimmedWhite, 10);
+  transition: background-color .25s;
+}
+
+.ClosingButton:hover .cross-1,
+.ClosingButton:hover .cross-2 {
+  background-color: $dimmedWhite;
+}
+
+.ClosingButton:active .cross-1,
+.ClosingButton:active .cross-2 {
+  background-color: white;
+}
