@@ -7,3 +7,4 @@ export { default as IconBurn } from "./IconBurn";
 export { default as IconMask } from "./IconMask";
 export { default as IconPen } from "./IconPen";
 export { default as IconCompass } from "./IconCompass";
+export { default as IconGithub } from "./IconGithub";
