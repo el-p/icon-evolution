@@ -23,22 +23,42 @@ class Details extends Component {
 
   onBlur = () => {
     this.setState({ blurRequested: true });
+    
+    // we release the modal background after the animation end
     setTimeout(() => {
       this.setState({ blurRequested: false });
       this.props.onBlur();
     }, 250);
   };
 
+  /**
+   * Avoid triggering the closing action when the actual windows is clicked
+   */
   onContentClick = (event) => {
     event.stopPropagation();
   }
 
-  render() {
+  /**
+   * Enable or disable scrolling on page body based upon the modal openin state
+   */
+  toggleBodyScroll() {
+    document.body.style.overflow = this.props.isOpen ? "hidden" : "";
+  }
+
+  getModalWindowClassName(): String {
     let modalClassName = "modal";
+    
     if (this.state.blurRequested) modalClassName += " backOutDown";
     if (this.props.isOpen && !this.state.blurRequested)
       modalClassName += " backInUp";
 
+    return modalClassName
+  }
+
+  render() {
+    this.toggleBodyScroll();
+    const modalClassName = this.getModalWindowClassName();
+    
     return (
       <div
         className="Details"

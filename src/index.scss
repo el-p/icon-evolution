@@ -28,44 +28,12 @@ strong::selection {
 	color: $blackInk;
 }
 
-// .ribbon {
-//   background-color: darken($orange,5);
-//   overflow: hidden;
-//   white-space: nowrap;
-//   position: absolute;
-//   left: -50px;
-//   top: 40px;
-//   -webkit-transform: rotate(-45deg);
-//      -moz-transform: rotate(-45deg);
-//       -ms-transform: rotate(-45deg);
-//        -o-transform: rotate(-45deg);
-//           transform: rotate(-45deg);
-// }
-// .ribbon a {
-//   border: 1px solid lighten($lightOrange,20);
-//   color: #fff;
-//   display: block;
-//   font: bold 81.25% "Helvetica Neue", Helvetica, Arial, sans-serif;
-//   margin: 1px 0;
-//   padding: 10px 50px;
-//   text-align: center;
-//   text-decoration: none;
-// }
-
 .ribbon {
   font-size: 100%;
   font-family: sans-serif;
   line-height: 1.2;
-  --animate-duration: 1s;
-  --animate-delay: 1s;
-  --animate-repeat: 1;
-  --c-main: #351c75;
-  --c-secondary: #e69138;
-  --c-dark: #333;
-  --c-background: #fce5cd;
-  --c-background-dark: #f7d7b5;
   box-sizing: border-box;
-  z-index: 100;
+  z-index: 1;
   width: 150px;
   height: 150px;
   transform: rotate(45deg);
@@ -84,7 +52,7 @@ a.forkme {
 	top: 12.5px;
 	left: 12.5px;
 	position: absolute;
-	z-index: 105;
+	z-index: 5;
 	opacity: .20;
 	transition: opacity .5s;
 }
